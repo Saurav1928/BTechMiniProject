@@ -1,0 +1,248 @@
+Natural Language Question,SQL Query
+Give the list of all students,SELECT * FROM students;
+Show me the students in Computer Science,SELECT * FROM students WHERE branch='Computer Science';
+Count the number of male students,SELECT COUNT* FROM students WHERE gender='Male';
+Get CGPA of John Smith,"SELECT cgpa1, cgpa2 FROM students WHERE first_name='John' AND last_name='Smith';"
+List all students in the final year,SELECT * FROM students WHERE class='Final Year';
+Find all students with a CGPA greater than 8,SELECT * FROM students WHERE cgpa1 > 8;
+How many students are there in the IT branch?,SELECT COUNT* FROM students WHERE branch='Information Technology';
+Show me the first name and last name of all female students,"SELECT first_name, last_name FROM students WHERE gender='Female';"
+Get the project guide for Alex Doe,SELECT project_guide_name FROM students WHERE first_name='Alex' AND last_name='Doe';
+Find the average CGPA of all students,SELECT AVGcgpa1 FROM students;
+List all students who have dropped a year,SELECT * FROM students WHERE year_drop=1;
+Show the details of students with CGPA less than 5,SELECT * FROM students WHERE cgpa1 < 5;
+Get the count of students in each branch,"SELECT branch, COUNT* FROM students GROUP BY branch;"
+Find students with a CGPA between 7 and 9,SELECT * FROM students WHERE cgpa1 BETWEEN 7 AND 9;
+List all students with the last name 'Brown',SELECT * FROM students WHERE last_name='Brown';
+Get the PRN of students guided by Dr. Smith,SELECT PRN FROM students WHERE project_guide_name='Dr. Smith';
+Show the details of students in the second year,SELECT * FROM students WHERE class='Second Year';
+Count the total number of students in the database,SELECT COUNT* FROM students;
+Find students with CGPA1 greater than CGPA2,SELECT * FROM students WHERE cgpa1 > cgpa2;
+List all students who are male and in the final year,SELECT * FROM students WHERE gender='Male' AND class='Final Year';
+Get the maximum CGPA among all students,SELECT MAXcgpa1 FROM students;
+Find the details of students whose first name starts with 'E',SELECT * FROM students WHERE first_name LIKE 'E%';
+List students with a project guide name containing 'Dr.',SELECT * FROM students WHERE project_guide_name LIKE '%Dr.%';
+Count how many students have a CGPA of 9 or more,SELECT COUNT* FROM students WHERE cgpa1 >= 9;
+Find all students who have never dropped a year,SELECT * FROM students WHERE year_drop=0;
+Show all students with CGPA3 and CGPA4 filled,SELECT * FROM students WHERE cgpa3 IS NOT NULL AND cgpa4 IS NOT NULL;
+List the first five students in alphabetical order by last name,SELECT * FROM students ORDER BY last_name LIMIT 5;
+Get the distinct branches of students in the database,SELECT DISTINCT branch FROM students;
+Find students who have the same first and last name,SELECT * FROM students WHERE first_name = last_name;
+Show the average CGPA1 and CGPA2 for female students,"SELECT AVGcgpa1, AVGcgpa2 FROM students WHERE gender='Female';"
+Get the PRNs of students with CGPA1 less than 6.5,SELECT PRN FROM students WHERE cgpa1 < 6.5;
+Find students who are in the 'Mechanical' branch and have a CGPA of 7.5 or higher,SELECT * FROM students WHERE branch='Mechanical' AND cgpa1 >= 7.5;
+Show details of students guided by 'Prof. Lee',SELECT * FROM students WHERE project_guide_name='Prof. Lee';
+Get the number of female students in each class,"SELECT class, COUNT* FROM students WHERE gender='Female' GROUP BY class;"
+List students with a CGPA1 between 6.0 and 8.0,SELECT * FROM students WHERE cgpa1 BETWEEN 6.0 AND 8.0;
+Find students who have both CGPA3 and CGPA4 above 7.0,SELECT * FROM students WHERE cgpa3 > 7.0 AND cgpa4 > 7.0;
+Count the total number of female students,SELECT COUNT* FROM students WHERE gender='Female';
+Get the names of all students in the 'Civil' branch,"SELECT first_name, last_name FROM students WHERE branch='Civil';"
+Show the PRN and project guide of students with CGPA2 filled,"SELECT PRN, project_guide_name FROM students WHERE cgpa2 IS NOT NULL;"
+List all students with a PRN starting with 'WCE',SELECT * FROM students WHERE PRN LIKE 'WCE%';
+Find students with a CGPA greater than CGPA2,SELECT * FROM students WHERE cgpa1 > cgpa2;
+Count how many students have a CGPA1 less than 4.0,SELECT COUNT* FROM students WHERE cgpa1 < 4.0;
+Show students with project guides that have a name starting with 'Dr.',SELECT * FROM students WHERE project_guide_name LIKE 'Dr.%';
+Get the first three students in the list,SELECT * FROM students LIMIT 3;
+Find students in the 'Electronics' branch with CGPA1 greater than 8.5,SELECT * FROM students WHERE branch='Electronics' AND cgpa1 > 8.5;
+Show all details of students who are in the first year,SELECT * FROM students WHERE class='First Year';
+Count the number of students who have a project guide named 'Dr. Brown',SELECT COUNT* FROM students WHERE project_guide_name='Dr. Brown';
+Get the last names of all students with CGPA1 above 9.0,SELECT last_name FROM students WHERE cgpa1 > 9.0;
+Find students who are male and have CGPA2 below 5.5,SELECT * FROM students WHERE gender='Male' AND cgpa2 < 5.5;
+List all students along with their CGPA1 in descending order,SELECT * FROM students ORDER BY cgpa1 DESC;
+Get the count of students in 'First Year' and 'Second Year',"SELECT class, COUNT* FROM students WHERE class IN 'First Year', 'Second Year' GROUP BY class;"
+Find students who have a CGPA1 equal to their CGPA2,SELECT * FROM students WHERE cgpa1 = cgpa2;
+Show the details of students whose first name contains 'a',SELECT * FROM students WHERE first_name LIKE '%a%';
+List all students along with their year drop status,"SELECT first_name, last_name, year_drop FROM students;"
+Count the total number of students in the 'Civil' branch,SELECT COUNT* FROM students WHERE branch='Civil';
+Find students who have a CGPA1 greater than 9 and are in 'Third Year',SELECT * FROM students WHERE cgpa1 > 9 AND class='Third Year';
+Show project guide names of students with CGPA3 filled,SELECT project_guide_name FROM students WHERE cgpa3 IS NOT NULL;
+Get the list of distinct classes from the students table,SELECT DISTINCT class FROM students;
+Count how many students are there for each gender,"SELECT gender, COUNT* FROM students GROUP BY gender;"
+List students in alphabetical order by first name,SELECT * FROM students ORDER BY first_name;
+Find students in 'Information Technology' who are not female,SELECT * FROM students WHERE branch='Information Technology' AND gender != 'Female';
+Show the average CGPA1 for male students,SELECT AVGcgpa1 FROM students WHERE gender='Male';
+Get students whose first name is either 'Emily' or 'David',"SELECT * FROM students WHERE first_name IN 'Emily', 'David';"
+List the details of students whose PRN ends with '234',SELECT * FROM students WHERE PRN LIKE '%234';
+Count how many students have a CGPA1 of exactly 6.0,SELECT COUNT* FROM students WHERE cgpa1 = 6.0;
+Find students who are female and have a CGPA3 less than 5.0,SELECT * FROM students WHERE gender='Female' AND cgpa3 < 5.0;
+Show the details of students who have a project guide with 'Prof.' in the name,SELECT * FROM students WHERE project_guide_name LIKE '%Prof.%';
+Get the last names of students who are in the 'Mechanical' branch,SELECT last_name FROM students WHERE branch='Mechanical';
+Count the total number of students with year_drop equal to 0,SELECT COUNT* FROM students WHERE year_drop=0;
+List students with CGPA1 above 8 and class 'Final Year',SELECT * FROM students WHERE cgpa1 > 8 AND class='Final Year';
+Find students who have dropped a year and are in the 'Second Year',SELECT * FROM students WHERE year_drop=1 AND class='Second Year';
+Show the first three project guides for students in 'Computer Science',SELECT project_guide_name FROM students WHERE branch='Computer Science' LIMIT 3;
+"Get the names of students who have both CGPA2 and CG
+
+PA3 filled","SELECT first_name, last_name FROM students WHERE cgpa2 IS NOT NULL AND cgpa3 IS NOT NULL;"
+Count how many students are there with CGPA1 above 7.5,SELECT COUNT* FROM students WHERE cgpa1 > 7.5;
+Find all students in 'Electronics' who have not dropped a year,SELECT * FROM students WHERE branch='Electronics' AND year_drop=0;
+List students in 'IT' branch with CGPA4 filled,SELECT * FROM students WHERE branch='IT' AND cgpa4 IS NOT NULL;
+Show the count of students per class,"SELECT class, COUNT* FROM students GROUP BY class;"
+Get the PRN of all students who have a CGPA less than 6.5 in any semester,SELECT PRN FROM students WHERE cgpa1 < 6.5 OR cgpa2 < 6.5 OR cgpa3 < 6.5 OR cgpa4 < 6.5;
+Find students who have the same CGPA1 and CGPA2,SELECT * FROM students WHERE cgpa1 = cgpa2;
+Show students with a last name that contains 'an',SELECT * FROM students WHERE last_name LIKE '%an%';
+Get the list of distinct project guides,SELECT DISTINCT project_guide_name FROM students;
+Count the number of students in 'First Year' and 'Third Year',"SELECT class, COUNT* FROM students WHERE class IN 'First Year', 'Third Year' GROUP BY class;"
+Find students whose first name starts with 'S' and last name starts with 'D',SELECT * FROM students WHERE first_name LIKE 'S%' AND last_name LIKE 'D%';
+List students with CGPA1 above 7.0 and CGPA2 below 6.5,SELECT * FROM students WHERE cgpa1 > 7.0 AND cgpa2 < 6.5;
+Show the project guide of students who have dropped a year,SELECT project_guide_name FROM students WHERE year_drop=1;
+Get the list of students who have a CGPA1 of 6.5 or greater,SELECT * FROM students WHERE cgpa1 >= 6.5;
+Count how many students are there in the 'Information Technology' class,SELECT COUNT* FROM students WHERE class='Information Technology';
+Find students with CGPA3 above 7.0 who are in the second year,SELECT * FROM students WHERE cgpa3 > 7.0 AND class='Second Year';
+Show details of students whose project guide is 'Dr. Williams',SELECT * FROM students WHERE project_guide_name='Dr. Williams';
+Get the last names of students whose first names contain 'e',SELECT last_name FROM students WHERE first_name LIKE '%e%';
+Count the number of students who have a year drop status of True,SELECT COUNT* FROM students WHERE year_drop=1;
+List all students in the 'Civil' branch along with their CGPA1,"SELECT first_name, last_name, cgpa1 FROM students WHERE branch='Civil';"
+Find students in 'Mechanical' with CGPA1 less than 6.0,SELECT * FROM students WHERE branch='Mechanical' AND cgpa1 < 6.0;
+Show the first three students with the highest CGPA1,SELECT * FROM students ORDER BY cgpa1 DESC LIMIT 3;
+Get the project guide name for students with CGPA2 filled,SELECT project_guide_name FROM students WHERE cgpa2 IS NOT NULL;
+Count how many students have CGPA4 above 8.5,SELECT COUNT* FROM students WHERE cgpa4 > 8.5;
+Find students who are male and have a project guide name containing 'Dr.',SELECT * FROM students WHERE gender='Male' AND project_guide_name LIKE '%Dr.%';
+Show the average CGPA1 for students in 'Second Year',SELECT AVGcgpa1 FROM students WHERE class='Second Year';
+Get the list of all students in 'First Year' with CGPA less than 5.5,SELECT * FROM students WHERE class='First Year' AND cgpa1 < 5.5;
+Find students who have dropped a year but still have CGPA3 and CGPA4,SELECT * FROM students WHERE year_drop=1 AND cgpa3 IS NOT NULL OR cgpa4 IS NOT NULL;
+Show the total count of female students who are in the 'Civil' branch,SELECT COUNT* FROM students WHERE branch='Civil' AND gender='Female';
+Get the PRN of students who have a project guide with 'Dr.' in their name,SELECT PRN FROM students WHERE project_guide_name LIKE '%Dr.%';
+Count how many students have CGPA1 less than 6 and are in 'First Year',SELECT COUNT* FROM students WHERE cgpa1 < 6 AND class='First Year';
+List students with CGPA1 above 8.0 and last name starting with 'T',SELECT * FROM students WHERE cgpa1 > 8.0 AND last_name LIKE 'T%';
+Find the distinct classes of students with CGPA2 above 7.0,SELECT DISTINCT class FROM students WHERE cgpa2 > 7.0;
+Show the details of students whose first name starts with 'A' and last name starts with 'K',SELECT * FROM students WHERE first_name LIKE 'A%' AND last_name LIKE 'K%';
+Get the list of all students who have a CGPA1 greater than their CGPA2,SELECT * FROM students WHERE cgpa1 > cgpa2;
+Count how many students are there in 'Final Year' and have CGPA2 filled,SELECT COUNT* FROM students WHERE class='Final Year' AND cgpa2 IS NOT NULL;
+Find students whose project guide is either 'Dr. Brown' or 'Dr. Smith',"SELECT * FROM students WHERE project_guide_name IN 'Dr. Brown', 'Dr. Smith';"
+Show the last names of all students in 'Mechanical' branch,SELECT last_name FROM students WHERE branch='Mechanical';
+Get the PRNs of students in 'Electronics' who have dropped a year,SELECT PRN FROM students WHERE branch='Electronics' AND year_drop=1;
+Count how many students are there whose last name starts with 'W',SELECT COUNT* FROM students WHERE last_name LIKE 'W%';
+Find all students who have a CGPA of 9.0 or higher,SELECT * FROM students WHERE cgpa1 >= 9.0;
+Show project guide names of students who have a CGPA1 below 5.0,SELECT project_guide_name FROM students WHERE cgpa1 < 5.0;
+Get the details of students whose first name ends with 'e',SELECT * FROM students WHERE first_name LIKE '%e';
+Count the number of students in the 'Information Technology' branch who are male,SELECT COUNT* FROM students WHERE branch='Information Technology' AND gender='Male';
+Find students who are in 'Civil' with CGPA2 above 8.0,SELECT * FROM students WHERE branch='Civil' AND cgpa2 > 8.0;
+Show the first ten students ordered by CGPA1,SELECT * FROM students ORDER BY cgpa1 LIMIT 10;
+Get the average CGPA of students in 'Final Year',SELECT AVGcgpa1 FROM students WHERE class='Final Year';
+List all students with their CGPA1 and CGPA2,"SELECT first_name, last_name, cgpa1, cgpa2 FROM students;"
+Find students who have a year drop status of False,SELECT * FROM students WHERE year_drop=0;
+Show the names of all students whose last name ends with 's',"SELECT first_name, last_name FROM students WHERE last_name LIKE '%s';"
+Count how many students are there in each class,"SELECT class, COUNT* FROM students GROUP BY class;"
+Find students who are male and in 'Third Year',SELECT * FROM students WHERE gender='Male' AND class='Third Year';
+Get the project guide name for students with a CGPA1 of 8.5 or higher,SELECT project_guide_name FROM students WHERE cgpa1 >= 8.5;
+Show details of students in 'Information Technology' with CGPA2 below 6.5,SELECT * FROM students WHERE branch='Information Technology' AND cgpa2 < 6.5;
+Count the total number of students with CGPA3 filled,SELECT COUNT* FROM students WHERE cgpa3 IS NOT NULL;
+Find students who are female and have a CGPA1 greater than 7.0,SELECT * FROM students WHERE gender='Female' AND cgpa1 > 7.0;
+Show the distinct project guides for students in 'Computer Science',SELECT DISTINCT project_guide_name FROM students WHERE branch='Computer Science';
+Get the details of students whose first name starts with 'N' and last name starts with 'S',SELECT * FROM students WHERE first_name LIKE 'N%' AND last_name LIKE 'S%';
+Count how many students have dropped a year and are in 'Final Year',SELECT COUNT* FROM students WHERE year_drop=1 AND class='Final Year';
+Find students who have CGPA1 equal to their CGPA3,SELECT * FROM students WHERE cgpa1 = cgpa3;
+Show the names of students with CGPA4 above 9.0,"SELECT first_name, last_name FROM students WHERE cgpa4 > 9.0;"
+Get the project guide name for students with last name 'Clark',"SELECT project_guide_name FROM students WHERE last_name='Clark';"
+Count how many students are there in 'Second Year' and have CGPA2 above 7.0,SELECT COUNT* FROM students WHERE class='Second Year' AND cgpa2 > 7.0;
+List all students who have not filled CGPA4,SELECT * FROM students WHERE cgpa4 IS NULL;
+Find students in 'IT' with CGPA1 less than 6.0 and CGPA2 greater than 7.0,SELECT * FROM students WHERE branch='IT' AND cgpa1 < 6.0 AND cgpa2 > 7.0;
+Show the average CGPA of students in the 'Civil' branch,SELECT AVGcgpa1 FROM students WHERE branch='Civil';
+Get the PRN of students whose last name starts with 'B',SELECT PRN FROM students WHERE last_name LIKE 'B%';
+Count how many students in 'First Year' have a project guide name containing 'Dr.',SELECT COUNT* FROM students WHERE class='First Year' AND project_guide_name LIKE '%Dr.%';
+Find students who have a CGPA2 above 6.5 and a project guide named 'Dr. Wilson',SELECT * FROM students WHERE cgpa2 > 6.5 AND project_guide_name='Dr. Wilson';
+Show details of students in 'Information Technology' with CGPA1 greater than 8.0,SELECT * FROM students WHERE branch='Information Technology' AND cgpa1 > 8.0;
+Get the last names of all students who have a CGPA4 filled,SELECT last_name FROM students WHERE cgpa4 IS NOT NULL;
+Count how many students have a project guide with 'Professor' in their name,SELECT COUNT* FROM students WHERE project_guide_name LIKE '%Professor%';
+Find students in 'Mechanical' with CGPA2 equal to 5.5,SELECT * FROM students WHERE branch='Mechanical' AND cgpa2 = 5.5;
+Show the distinct classes of students who have dropped a year,SELECT DISTINCT class FROM students WHERE year_drop=1;
+Get the project guide name for students with a CGPA3 of 9.0 or higher,SELECT project_guide_name FROM students WHERE cgpa3 >= 9.0;
+Count how many students have CGPA1 below 5.0 and are in 'Civil' branch,SELECT COUNT* FROM students WHERE cgpa1 < 5.0 AND branch='Civil';
+Find students who are in 'Second Year' with CGPA3 above 6.0,SELECT * FROM students WHERE class='Second Year' AND cgpa3 > 6.0;
+Show the total count of students who have a project guide with 'Dr.' in their name,SELECT COUNT* FROM students WHERE project_guide_name LIKE '%Dr.%';
+Get the details of students in 'IT' with CGPA1 below 7.5,SELECT * FROM students WHERE branch='IT' AND cgpa1 < 7.5;
+Count how many students are there in 'Final Year' with CGPA4 above 8.0,SELECT COUNT* FROM students WHERE class='Final Year' AND cgpa4 > 8.0;
+Find students whose first name contains 'r' and last name contains 's',SELECT * FROM students WHERE first_name LIKE '%r%' AND last_name LIKE '%s%';
+Show the project guide names of students with CGPA1 filled,SELECT project_guide_name FROM students WHERE cgpa1 IS NOT NULL;
+Get the list of distinct project guides for students in 'IT' branch,SELECT DISTINCT project_guide_name FROM students WHERE branch='IT';
+Count how many students are there with a year drop status of False,SELECT COUNT* FROM students WHERE year_drop=0;
+Find students who have CGPA4 filled and are in 'Final Year',SELECT * FROM students WHERE cgpa4 IS NOT NULL AND class='Final Year';
+Show the last names of students who have a CGPA2 below 6.0,SELECT last_name FROM students WHERE cgpa2 < 6.0;
+Get the project guide name for students with CGPA1 filled,SELECT project_guide_name FROM students WHERE cgpa1 IS NOT NULL;
+Count how many students are in 'Information Technology' with CGPA3 above 7.0,SELECT COUNT* FROM students WHERE branch='Information Technology' AND cgpa3 > 7.0;
+Find students who are female and have a CGPA2 less than 5.0,SELECT * FROM students WHERE gender='Female' AND cgpa2 < 5.0;
+Show details of students whose first name starts with 'E',SELECT * FROM students WHERE first_name LIKE 'E%';
+Get the PRN of students who have CGPA1 above 8.0 and CGPA2 below 6.0,SELECT PRN FROM students WHERE cgpa1 > 8.0 AND cgpa2 < 6.0;
+Count how many students have CGPA3 filled and are in 'Mechanical' branch,SELECT COUNT* FROM students WHERE cgpa3 IS NOT NULL AND branch='Mechanical';
+Find students whose last name starts with 'H' or 'K',SELECT * FROM students WHERE last_name LIKE 'H%' OR last_name LIKE 'K%';
+Show project guide names of students in 'Electronics' who have a CGPA1 above 7.0,SELECT project_guide_name FROM students WHERE branch='Electronics' AND cgpa1 > 7.0;
+Get the list of all students who have CGPA1 less than 5.0 and are in 'IT',SELECT * FROM students WHERE cgpa1 < 5.0 AND branch='IT';
+Count how many students are there in each branch,"SELECT branch, COUNT* FROM students GROUP BY branch;"
+Find students who are in 'Third Year' and have CGPA2 above 8.0,SELECT * FROM students WHERE class='Third Year' AND cgpa2 > 8.0;
+Show the last names of students whose first name ends with 'a',SELECT last_name FROM students WHERE first_name LIKE '%a';
+Get the details of students in 'Civil' branch with CGPA1 filled,SELECT * FROM students WHERE branch='Civil' AND cgpa1 IS NOT NULL;
+Count how many students have a project guide with 'Assistant' in their name,SELECT COUNT* FROM students WHERE project_guide_name LIKE '%Assistant%';
+Find students who are female and have a CGPA1 equal to their CGPA4,SELECT * FROM students WHERE gender='Female' AND cgpa1 = cgpa4;
+Show the average CGPA of students in 'Mechanical',SELECT AVGcgpa1 FROM students WHERE branch='Mechanical';
+Get the last names of students who have a year drop status of True,SELECT last_name FROM students WHERE year_drop=1;
+Count how many students are in 'Final Year' and have CGPA3 above 7.5,SELECT COUNT* FROM students WHERE class='Final Year' AND cgpa3 > 7.5;
+Find students whose first name contains 'm' and last name contains 'k',SELECT * FROM students WHERE first_name LIKE '%m%' AND last_name LIKE '%k%';
+Show project guide names for students who have CGPA2 below 5.5,SELECT project_guide_name FROM students WHERE cgpa2 < 5.5;
+Get the details of students with a project guide containing 'Dr.',SELECT * FROM students WHERE project_guide_name LIKE '%Dr.%';
+Count how many students are there in 'First Year' and have CGPA1 filled,SELECT COUNT* FROM students WHERE class='First Year' AND cgpa1 IS NOT NULL;
+Find students who are male and have a CGPA3 above 8.0,SELECT * FROM students WHERE gender='Male' AND cgpa3 > 8.0;
+Show the last names of students who have dropped a year,SELECT last_name FROM students WHERE year_drop=1;
+Get the project guide name for students with last name starting with 'T',SELECT project_guide_name FROM students WHERE last_name LIKE 'T%';
+Count how many students have a CGPA2 above 9.0 and are in 'Second Year',SELECT COUNT* FROM students WHERE cgpa2 > 9.0 AND class='Second Year';
+Find students in 'IT' with a CGPA1 equal to their CGPA4,SELECT * FROM students WHERE branch='IT' AND cgpa1 = cgpa4;
+Show the details of students whose last name starts with 'J',SELECT * FROM students WHERE last_name LIKE 'J%';
+Get the PRN of students with CGPA2 less than 6.5,SELECT PRN FROM students WHERE cgpa2 < 6.5;
+Count how many students have a project guide with 'Researcher' in their name,SELECT COUNT* FROM students WHERE project_guide_name LIKE '%Researcher%';
+Find students who are in 'First Year' and have CGPA3 equal to 5.0,SELECT * FROM students WHERE class='First Year' AND cgpa3 = 5.0;
+Show the names of students in 'Mechanical' with CGPA2 above 7.0,"SELECT first_name, last_name FROM students WHERE branch='Mechanical' AND cgpa2 > 7.0;"
+Get the details of students with last names starting with 'F',SELECT * FROM students WHERE last_name LIKE 'F%';
+PA4 filled and are in 'Information Technology'",SELECT COUNT* FROM students WHERE cgpa4 IS NOT NULL AND branch='Information Technology';
+Find students who are in 'Third Year' and have a project guide named 'Dr. Smith',SELECT * FROM students WHERE class='Third Year' AND project_guide_name='Dr. Smith';
+Show the last names of students who have CGPA1 below 6.0,SELECT last_name FROM students WHERE cgpa1 < 6.0;
+Get the PRN of students who are in 'Second Year' and have CGPA3 filled,SELECT PRN FROM students WHERE class='Second Year' AND cgpa3 IS NOT NULL;
+Count how many students are there with CGPA2 less than 4.0,SELECT COUNT* FROM students WHERE cgpa2 < 4.0;
+Find students whose last name ends with 'n' and are in 'IT',SELECT * FROM students WHERE last_name LIKE '%n' AND branch='IT';
+Show the project guide names of students in 'Civil' branch,SELECT project_guide_name FROM students WHERE branch='Civil';
+Get the details of students with CGPA3 above 8.0 and CGPA1 below 6.5,SELECT * FROM students WHERE cgpa3 > 8.0 AND cgpa1 < 6.5;
+Count how many students are in 'First Year' and have CGPA2 filled,SELECT COUNT* FROM students WHERE class='First Year' AND cgpa2 IS NOT NULL;
+Find students who are female and have CGPA4 above 7.0,SELECT * FROM students WHERE gender='Female' AND cgpa4 > 7.0;
+Show the last names of students in 'Information Technology' with CGPA2 below 6.0,SELECT last_name FROM students WHERE branch='Information Technology' AND cgpa2 < 6.0;
+Get the project guide name of students in 'Electronics' who have CGPA1 above 9.0,SELECT project_guide_name FROM students WHERE branch='Electronics' AND cgpa1 > 9.0;
+Count how many students are there in 'Second Year' and have a project guide name starting with 'Dr.',SELECT COUNT* FROM students WHERE class='Second Year' AND project_guide_name LIKE 'Dr.%';
+Find students who are in 'Final Year' and have CGPA2 below 5.0,SELECT * FROM students WHERE class='Final Year' AND cgpa2 < 5.0;
+Show the details of students with a project guide name containing 'Professor',SELECT * FROM students WHERE project_guide_name LIKE '%Professor%';
+Get the PRN of students who have CGPA1 above 7.5 and are in 'Mechanical',SELECT PRN FROM students WHERE cgpa1 > 7.5 AND branch='Mechanical';
+Count how many students are there with a project guide containing 'Smith',SELECT COUNT* FROM students WHERE project_guide_name LIKE '%Smith%';
+Find students whose first name starts with 'S' and last name ends with 'r',SELECT * FROM students WHERE first_name LIKE 'S%' AND last_name LIKE '%r';
+Show project guide names of students with CGPA2 below 5.0,SELECT project_guide_name FROM students WHERE cgpa2 < 5.0;
+Get the details of students who are in 'Information Technology' with CGPA1 above 6.5,SELECT * FROM students WHERE branch='Information Technology' AND cgpa1 > 6.5;
+Count how many students are in 'Third Year' and have a project guide with 'Dr.' in their name,SELECT COUNT* FROM students WHERE class='Third Year' AND project_guide_name LIKE '%Dr.%';
+Find students who are male and have CGPA2 equal to 7.0,SELECT * FROM students WHERE gender='Male' AND cgpa2 = 7.0;
+Show the last names of students in 'Electronics' who have CGPA3 below 5.5,SELECT last_name FROM students WHERE branch='Electronics' AND cgpa3 < 5.5;
+Get the PRN of students who are in 'First Year' and have CGPA4 above 8.0,SELECT PRN FROM students WHERE class='First Year' AND cgpa4 > 8.0;
+Count how many students have a year drop status of True and are in 'Mechanical',SELECT COUNT* FROM students WHERE year_drop=1 AND branch='Mechanical';
+Find students who are in 'Second Year' and have CGPA1 below 5.0,SELECT * FROM students WHERE class='Second Year' AND cgpa1 < 5.0;
+Show the details of students whose first name ends with 'n',SELECT * FROM students WHERE first_name LIKE '%n';
+Get the project guide name of students who have CGPA2 filled,SELECT project_guide_name FROM students WHERE cgpa2 IS NOT NULL;
+Count how many students are there in 'IT' with CGPA3 above 9.0,SELECT COUNT* FROM students WHERE branch='IT' AND cgpa3 > 9.0;
+Find students whose last name contains 'a' and are in 'Civil',SELECT * FROM students WHERE last_name LIKE '%a%' AND branch='Civil';
+Show the last names of students who have CGPA4 above 7.0,SELECT last_name FROM students WHERE cgpa4 > 7.0;
+Get the details of students who have a project guide name containing 'Professor',SELECT * FROM students WHERE project_guide_name LIKE '%Professor%';
+Count how many students are in 'Information Technology' and have CGPA3 filled,SELECT COUNT* FROM students WHERE branch='Information Technology' AND cgpa3 IS NOT NULL;
+Find students who are in 'Final Year' and have CGPA1 equal to their CGPA3,SELECT * FROM students WHERE class='Final Year' AND cgpa1 = cgpa3;
+Show project guide names of students who have CGPA2 above 8.0,SELECT project_guide_name FROM students WHERE cgpa2 > 8.0;
+Get the PRN of students whose last name starts with 'L',SELECT PRN FROM students WHERE last_name LIKE 'L%';
+Count how many students have a year drop status of False and are in 'IT',SELECT COUNT* FROM students WHERE year_drop=0 AND branch='IT';
+Find students in 'Mechanical' with a CGPA2 equal to 6.5,SELECT * FROM students WHERE branch='Mechanical' AND cgpa2 = 6.5;
+Show the details of students who have dropped a year and are in 'IT',SELECT * FROM students WHERE year_drop=1 AND branch='IT';
+Get the project guide name of students who are female and have CGPA1 below 5.0,SELECT project_guide_name FROM students WHERE gender='Female' AND cgpa1 < 5.0;
+Count how many students are there with CGPA1 above 9.0 and are in 'Civil',SELECT COUNT* FROM students WHERE cgpa1 > 9.0 AND branch='Civil';
+Find students who are in 'Third Year' and have CGPA4 below 6.0,SELECT * FROM students WHERE class='Third Year' AND cgpa4 < 6.0;
+Show the last names of students who have CGPA1 equal to their CGPA2,SELECT last_name FROM students WHERE cgpa1 = cgpa2;
+Get the details of students who are male and have a project guide named 'Dr. John',SELECT * FROM students WHERE gender='Male' AND project_guide_name='Dr. John';
+Count how many students are there in 'Final Year' and have CGPA2 filled,SELECT COUNT* FROM students WHERE class='Final Year' AND cgpa2 IS NOT NULL;
+Find students who are in 'Civil' and have CGPA1 above 6.5,SELECT * FROM students WHERE branch='Civil' AND cgpa1 > 6.5;
+Show the project guide names of students with CGPA3 below 5.0,SELECT project_guide_name FROM students WHERE cgpa3 < 5.0;
+Get the PRN of students who have dropped a year,SELECT PRN FROM students WHERE year_drop=1;
+Count how many students have CGPA4 filled and are in 'Second Year',SELECT COUNT* FROM students WHERE cgpa4 IS NOT NULL AND class='Second Year';
+Find students whose first name contains 'a' and last name starts with 'B',SELECT * FROM students WHERE first_name LIKE '%a%' AND last_name LIKE 'B%';
+Show the last names of students in 'IT' who have CGPA2 above 6.0,SELECT last_name FROM students WHERE branch='IT' AND cgpa2 > 6.0;
+Get the details of students who are female and have CGPA3 above 8.0,SELECT * FROM students WHERE gender='Female' AND cgpa3 > 8.0;
+Count how many students are in 'Mechanical' and have CGPA2 filled,SELECT COUNT* FROM students WHERE branch='Mechanical' AND cgpa2 IS NOT NULL;
+Find students who are in 'Second Year' and have a project guide named 'Dr. Adams',SELECT * FROM students WHERE class='Second Year' AND project_guide_name='Dr. Adams';
